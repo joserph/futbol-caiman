@@ -22,6 +22,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/blogs', function () {
+//     return view('admin.blogs.index');
+// });
+
+// Route::get('/{pathMatch}', function(){
+//     return view('welcome');
+// })->where('pathMatch', ".*");
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
