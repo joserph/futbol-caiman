@@ -16,7 +16,7 @@
         <div id="app">
 
         </div>
-        {{-- <div class="col-md-12 grid-margin stretch-card">
+        <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-header">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -66,6 +66,6 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
     </div>
 @endsection
