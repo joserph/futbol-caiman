@@ -29,5 +29,7 @@ class SuperAdminSeeder extends Seeder
         $rol->syncPermissions($permission);
 
         $user->assignRole([$rol->id]);
+
+        User::factory(50)->create();
     }
 }

@@ -26,7 +26,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive pt-3">
-                        <table class="table table-bordered table-hover border-primary table-sm">
+                        <table class="table table-hover border-light table-sm">
                             <thead>
                                 <tr>
                                     <th class="text-center">Role</th>

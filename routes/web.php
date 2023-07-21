@@ -5,6 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -38,4 +41,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('blogs', BlogController::class);
+    Route::resource('blogs', PostController::class);
+    Route::resource('blogs', CategoryController::class);
+    Route::resource('blogs', TagController::class);
+
 });

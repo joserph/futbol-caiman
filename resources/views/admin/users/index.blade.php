@@ -1,9 +1,18 @@
 @extends('layouts.admin.app')
 @section('title') User List @stop
 @section('content')
-    <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-        <div>
-            <h4 class="mb-3 mb-md-0">User list</h4>
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+            <div>
+              <h4 class="me-2 mb-3 mb-md-0">User list</h4>
+            </div>
+            <div class="d-flex align-items-center flex-wrap text-nowrap">
+                @can('create-user')
+                    <a class="btn btn-icon btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="New" href="{{ route('users.create') }}">
+                        <i data-feather="plus-circle"></i>
+                    </a>
+                @endcan
+            </div>
         </div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-dot">
@@ -15,19 +24,9 @@
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
-                <div class="card-header">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        @can('create-user')
-                            <a class="btn btn-icon btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="New" href="{{ route('users.create') }}">
-                                <i data-feather="plus-circle"></i>
-                            </a>
-                        @endcan
-                        
-                    </div>
-                </div>
                 <div class="card-body">
                     <div class="table-responsive pt-3">
-                        <table class="table table-bordered table-hover border-primary table-sm">
+                        <table class="table table-hover border-light table-sm">
                             <thead>
                                 <tr>
                                     <th class="text-center">Name</th>
@@ -65,7 +64,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="pagination">
+                        <div class="d-flex">
                             {!! $users->links() !!}
                         </div>
                     </div>
