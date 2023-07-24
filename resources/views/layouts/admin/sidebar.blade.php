@@ -1,23 +1,31 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        <a href="{{ route('home') }}" class="sidebar-brand">
+        <a href="{{ route('dashboard') }}" class="sidebar-brand">
             Futbol<span>Caiman</span>
         </a>
         <div class="sidebar-toggler not-active">
             <span></span>
             <span></span>
             <span></span>
-        </div>    
+        </div>
     </div>
     <div class="sidebar-body">
         <ul class="nav">
             <li class="nav-item nav-category">Main</li>
             <li class="nav-item">
-                <a href="{{ route('home') }}" class="nav-link">
+                <a href="{{ route('dashboard') }}" class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
                     <span class="link-title">Dashboard</span>
                 </a>
             </li>
+            <li class="nav-item nav-category">Admin</li>
+            <li class="nav-item">
+                <a href="{{ route('admin.categories.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="columns"></i>
+                    <span class="link-title">Categories</span>
+                </a>
+            </li>
+            <li class="nav-item nav-category">Auth</li>
             <li class="nav-item">
                 <a href="{{ route('users.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
@@ -31,9 +39,16 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('blogs.index') }}" class="nav-link">
+                <a href="{{ route('posts.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="bold"></i>
-                    <span class="link-title">Blogs</span>
+                    <span class="link-title">Posts</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('tags.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="tag"></i>
+                    <span class="link-title">Tags</span>
                 </a>
             </li>
             <li class="nav-item nav-category">web apps</li>
@@ -221,7 +236,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="pages/charts/sparkline.html" class="nav-link">Sparkline</a>
-                        </li>   
+                        </li>
                     </ul>
                 </div>
             </li>

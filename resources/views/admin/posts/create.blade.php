@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
-@section('title') Edit user @stop
+@section('title') Create post @stop
 @section('content')
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div>
-            <h4 class="mb-3 mb-md-0">Create user</h4>
+            <h4 class="mb-3 mb-md-0">Create post</h4>
         </div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-dot">
                 <li class="breadcrumb-item"><a href="{{ route('admin') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('users.index') }}">User list</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edit user</li>
+                <li class="breadcrumb-item"><a href="{{ route('posts.index') }}">Post list</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Create post</li>
             </ol>
         </nav>
     </div>
@@ -19,11 +19,11 @@
                 <div class="card-body">
                     @include('layouts.message.errors')
 
-                    {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'PUT']) !!}
+                    {!! Form::open(['route' => 'posts.store', 'method' => 'POST']) !!}
 
-                        @include('admin.users.partials.form')
+                        @include('admin.posts.partials.form')
 
-                        {{ Form::button('<i data-feather="refresh-ccw"></i> ' . '', ['type' => 'submit', 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'right', 'title' => 'Update', 'class' => 'btn btn-icon btn-outline-warning btn-sm']) }}
+                        {{ Form::button('<i data-feather="plus-circle"></i> ' . '', ['type' => 'submit', 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'right', 'title' => 'Create', 'class' => 'btn btn-icon btn-outline-primary btn-sm']) }}
 
                     {!! Form::close() !!}
                 </div>

@@ -7,7 +7,7 @@
         </div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-dot">
-                <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin') }}">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('users.index') }}">User list</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create user</li>
             </ol>
