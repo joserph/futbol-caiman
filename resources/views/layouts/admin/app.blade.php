@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="{{ asset('../assets/vendors/flag-icon-css/css/flag-icon.min.css')}}">
     <!-- endinject -->
 
-    <!-- Layout styles -->  
+    <!-- Layout styles -->
         <link rel="stylesheet" href="{{ asset('../assets/css/demo2/style.css')}}">
     <!-- End layout styles -->
 
-    <link rel="shortcut icon" href="{{ asset('../assets/images/favicon.png')}}" />  
+    <link rel="shortcut icon" href="{{ asset('../assets/images/favicon.png')}}" />
 
     <!-- Fonts old
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -42,6 +42,7 @@
     <!-- Scripts -->
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 <body>
     @include('layouts.admin.admin')
@@ -62,5 +63,6 @@
 	<!-- Custom js for this page -->
     <script src="{{ asset('../assets/js/dashboard-dark.js')}}"></script>
 	<!-- End custom js for this page -->
+    @livewireScripts
 </body>
 </html>

@@ -20,7 +20,7 @@
             </li>
             <li class="nav-item nav-category">Admin</li>
             <li class="nav-item">
-                <a href="{{ route('admin.categories.index') }}" class="nav-link">
+                <a href="{{ route('admin.categories') }}" class="nav-link">
                     <i class="link-icon" data-feather="columns"></i>
                     <span class="link-title">Categories</span>
                 </a>

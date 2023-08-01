@@ -46,7 +46,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('tags', TagController::class);
 
     Route::prefix('admin')->group(function () {
-        Route::resource('categories', CategoryController::class)->names('admin.categories');
+        Route::get('categories', function(){
+            return view('admin.categories.index');
+        })->name('admin.categories');
     });
 });
 
